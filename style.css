@@ -1,0 +1,88 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background-image: url("back.jpg");
+      background-repeat: no-repeat;
+      background-size:cover;
+      color: #0852ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Header */
+    h1 {
+      font-family: 'Cabin', sans-serif;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top:10px;
+      position: relative;
+      color: rgb(255, 255, 255);
+      letter-spacing: 2px;
+      animation: neonPulse 2s infinite alternate;
+    }
+
+    a {
+      color: #0BF;
+      font-weight: 600;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 2px;
+      margin-bottom: 20px;
+      position: relative;
+      color: rgb(255, 255, 255);
+      letter-spacing: 1px;
+    }
+
+    /* Neon glow animation */
+    @keyframes neonPulse {
+      0% {
+        text-shadow: 0 0 5px #0cf, 0 0 10px #0cf, 0 0 20px #0cf, 0 0 40px #0cf;
+      }
+      100% {
+        text-shadow: 0 0 10px #0cf, 0 0 20px #0cf, 0 0 30px #0cf, 0 0 50px #0cf;
+      }
+    }
+
+    /* Responsive iframe container */
+    .iframe-container {
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 16/9; /* Maintains 16:9 ratio */
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px #0CF;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      transform: translateZ(0); /* Fixes some rendering issues on mobile */
+    }
+
+    /* Media Queries for smaller screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+    }
