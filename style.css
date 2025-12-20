@@ -75,21 +75,16 @@
     /* Media Queries for smaller screens */
 @media screen and (max-width: 480px) {
     iframe {
-        /* 1. Make the iframe internally wider so it fits more columns */
-        width: 180%; 
+        /* No more transform or scale needed! */
+        width: 100%;
         
-        /* 2. Scale it down to fit the actual screen width */
-        /* 100% / 180% ≈ 0.55 */
-        transform: scale(0.55); 
+        /* This ensures the container actually reaches the bottom */
+        height: 100vh; /* 100% of the viewport height */
         
-        /* 3. Pin it to the top-left corner so it doesn't float away */
-        transform-origin: 0 0;
-        
-        /* 4. Compensate for the empty whitespace created by scaling down */
-        /* Since we scaled to 0.55, the height effectively shrunk too. 
-           We increase the container height to ensure it fills the space. */
-        height: 160vh; 
+        border: none;
+        display: block;
     }
+
     h1 {
         font-size: 1.5rem;
     }
