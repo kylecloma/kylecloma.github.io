@@ -58,34 +58,27 @@
     /* Responsive iframe container */
     .iframe-container {
       width: 100%;
-      max-width: 1200px;
-      aspect-ratio: 16/9; /* Maintains 16:9 ratio */
+      max-width: 1200px; /* Maintains 16:9 ratio */
       border-radius: 15px;
-      overflow: hidden;
       box-shadow: 0 0 20px #0CF;
-    }
-
-    iframe {
-      width: 100%;
-     height: 100vh;
-      border: none;
-      transform: translateZ(0); /* Fixes some rendering issues on mobile */
+      height:80vh;
     }
 
     /* Media Queries for smaller screens */
-@media screen and (max-width: 480px) {
+@media (min-width: 240px) {
     iframe {
         /* No more transform or scale needed! */
         width: 100%;
         
         /* This ensures the container actually reaches the bottom */
-        height: 100vh; /* 100% of the viewport height */
+        height: 100%; /* 100% of the viewport height */
         
         border: none;
         display: block;
+        transform: translateZ(0)
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
